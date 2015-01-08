@@ -1,6 +1,9 @@
 # naive slow solution!!
 
+start_time = Time.now
+
 i = 0
+upper_number = 20
 
 def divisible(number, range)
   range.each do | num |
@@ -10,11 +13,15 @@ end
 
 while true
 
-  i += 1
+  i += upper_number
 
   puts i
 
-  break if divisible(i, (1..20))
+  break if divisible(i, (1..upper_number))
 end
+
+elapsed_time = Time.now - start_time
+
+puts "Elapsed time : #{elapsed_time}"
 
 puts "answer : #{i}"
